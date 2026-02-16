@@ -12,33 +12,33 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background: linear-gradient(120deg,#e0e7ff,#f8fafc);
-    color:#0f172a;
+    background: linear-gradient(135deg,#0f172a,#020617);
+    color:#e2e8f0;
     line-height:1.6;
 }
 
 /* HERO */
 header{
-    background: linear-gradient(135deg,#4f46e5,#06b6d4);
+    background: linear-gradient(135deg,#6366f1,#22d3ee);
     color:white;
-    padding:70px 20px;
+    padding:80px 20px;
     text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 header h1{
-    font-size:44px;
+    font-size:46px;
     letter-spacing:1px;
 }
 
 header p{
     margin-top:10px;
     font-size:18px;
-    opacity:0.95;
+    opacity:0.9;
 }
 
 /* SECTIONS */
@@ -50,26 +50,26 @@ section{
 
 h2{
     margin-bottom:25px;
-    border-left:6px solid #4f46e5;
+    border-left:6px solid #22d3ee;
     padding-left:12px;
     font-size:28px;
 }
 
 /* GLASS CARD */
 .card{
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
-    border:1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
     padding:25px;
     border-radius:16px;
     margin-bottom:20px;
     transition:0.35s ease;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
 .card:hover{
-    transform: translateY(-6px) scale(1.01);
-    box-shadow:0 18px 40px rgba(0,0,0,0.15);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:0 18px 40px rgba(0,0,0,0.5);
 }
 
 /* GRID */
@@ -86,15 +86,33 @@ ul{
 /* CONTACT */
 .contact i{
     margin-right:10px;
-    color:#4f46e5;
+    color:#22d3ee;
+}
+
+/* EMAIL BUTTON */
+.email-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:linear-gradient(135deg,#6366f1,#22d3ee);
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.email-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(34,211,238,0.4);
 }
 
 /* FOOTER */
 footer{
     text-align:center;
     padding:25px;
-    background:#111827;
-    color:white;
+    background:#020617;
+    color:#94a3b8;
     margin-top:40px;
     font-size:14px;
 }
@@ -226,15 +244,15 @@ Dr. Natarajan Matric Hr. Sec. School – 100%
 <section>
 <h2>Contact</h2>
 <div class="card contact">
+
 <p><i class="fas fa-phone"></i>9363346048</p>
-<p>
-  <i class="fas fa-envelope"></i>
-  <a href="mailto:monishkumarravi15@gmail.com" style="color:inherit; text-decoration:none;">
-    monishkumarravi15@gmail.com
-  </a>
-</p>
 
 <p><i class="fas fa-location-dot"></i>Chennai, India</p>
+
+<a class="email-btn" href="mailto:monishkumarravi15@gmail.com">
+    <i class="fas fa-envelope"></i> Send Email
+</a>
+
 </div>
 </section>
 
