@@ -16,6 +16,260 @@
 }
 
 body{
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:#e2e8f0;
+    transition:0.4s;
+}
+
+/* LIGHT MODE */
+body.light{
+    background:linear-gradient(120deg,#e0e7ff,#f8fafc);
+    color:#0f172a;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#6366f1,#22d3ee);
+    color:white;
+    position:relative;
+}
+
+/* PROFILE IMAGE */
+.profile{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:4px solid white;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+/* DARK MODE BUTTON */
+.toggle{
+    position:absolute;
+    right:20px;
+    top:20px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* SECTIONS */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+h2{
+    border-left:6px solid #22d3ee;
+    padding-left:10px;
+    margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+body.light .card{
+    background:white;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:8px;
+    margin-top:10px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#6366f1,#22d3ee);
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    color:#94a3b8;
+    margin-top:30px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:22px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="toggle" onclick="toggleMode()">
+<i class="fas fa-moon"></i>
+</div>
+
+<img src="https://via.placeholder.com/150" class="profile" alt="Profile">
+
+<h1>MONISHKUMAR R</h1>
+<p id="typing"></p>
+
+</header>
+
+<section>
+<h2>Professional Summary</h2>
+<div class="card">
+To excel in my career by working in a reputed organization with loyalty,
+responsibility, and creativity while contributing to organizational growth.
+</div>
+</section>
+
+<section>
+<h2>Technical Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Programming</h3>
+<ul>
+<li>Java</li>
+<li>C++</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Areas of Interest</h3>
+<ul>
+<li>UI Modelling</li>
+<li>Cyber Security</li>
+<li>Cloud Computing</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Soft Skills</h3>
+<ul>
+<li>Leadership</li>
+<li>Creativity</li>
+<li>Time Management</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Projects</h2>
+
+<div class="card">All in One Health Care System</div>
+<div class="card">IoT Based Garbage Monitoring System</div>
+<div class="card">Smart Helmet</div>
+<div class="card">Campus Placement System using Generative AI</div>
+
+</section>
+
+<section>
+<h2>Contact</h2>
+
+<div class="card">
+
+<p><i class="fas fa-phone"></i> 9363346048</p>
+<p><i class="fas fa-location-dot"></i> Chennai, India</p>
+
+<a class="btn" href="mailto:monishkumarravi15@gmail.com">
+<i class="fas fa-envelope"></i> Send Email
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Monishkumar R
+</footer>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/919363346048" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+/* DARK MODE */
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+
+/* TYPING EFFECT */
+const text = "B.Tech – Computer Science & Business Systems";
+let i = 0;
+
+function typing(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing,50);
+    }
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monishkumar R | Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
     background: linear-gradient(135deg,#0f172a,#020617);
     color:#e2e8f0;
     line-height:1.6;
