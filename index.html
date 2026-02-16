@@ -12,105 +12,115 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:linear-gradient(120deg,#ffffff,#f5e6d3);
+    background: linear-gradient(120deg,#ffffff,#f5e6d3);
     color:#3b2f2f;
+    line-height:1.6;
 }
 
-/* HEADER */
+/* HERO */
 header{
-    text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(135deg,#f1d6b8,#e8c9a8);
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.profile{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    border:4px solid white;
-    object-fit:cover;
-    margin-bottom:15px;
-}
-
-h1{
-    margin-bottom:10px;
-}
-
-/* BUTTON */
-.btn{
-    display:inline-block;
-    padding:12px 22px;
-    border-radius:8px;
-    margin-top:15px;
-    text-decoration:none;
+    background: linear-gradient(135deg,#f1d6b8,#e8c9a8);
     color:#3b2f2f;
-    background:linear-gradient(135deg,#f1d6b8,#e8c9a8);
+    padding:70px 20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+header h1{
+    font-size:44px;
+    letter-spacing:1px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    opacity:0.95;
+}
+
+/* CV BUTTON */
+.cv-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:linear-gradient(135deg,#e8c9a8,#f1d6b8);
+    color:#3b2f2f;
+    border-radius:8px;
+    text-decoration:none;
     font-weight:600;
     transition:0.3s;
 }
 
-.btn:hover{
+.cv-btn:hover{
     transform:scale(1.05);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
     max-width:1000px;
     margin:auto;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 h2{
-    border-left:6px solid #e0bfa0;
-    padding-left:10px;
-    margin-bottom:20px;
+    margin-bottom:25px;
+    border-left:6px solid #e8c9a8;
+    padding-left:12px;
+    font-size:28px;
 }
 
-/* CARD */
+/* GLASS CARD */
 .card{
-    background:rgba(255,255,255,0.7);
-    border:1px solid rgba(230,200,170,0.5);
-    padding:20px;
-    border-radius:14px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(230,200,170,0.4);
+    padding:25px;
+    border-radius:16px;
     margin-bottom:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    transition:0.3s;
+    transition:0.35s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow:0 18px 40px rgba(0,0,0,0.1);
 }
 
+/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:22px;
+}
+
+ul{
+    margin-left:20px;
+}
+
+/* CONTACT */
+.contact i{
+    margin-right:10px;
+    color:#c59b73;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
-    background:#f1d6b8;
-    margin-top:30px;
+    padding:25px;
+    background:#e8c9a8;
+    color:#3b2f2f;
+    margin-top:40px;
+    font-size:14px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:22px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+/* RESPONSIVE */
+@media(max-width:600px){
+    header h1{
+        font-size:32px;
+    }
 }
 </style>
 </head>
@@ -118,16 +128,13 @@ footer{
 <body>
 
 <header>
+    <h1>MONISHKUMAR R</h1>
+    <p>B.Tech – Computer Science & Business Systems</p>
 
-<img src="https://via.placeholder.com/150" class="profile" alt="Profile">
-
-<h1>MONISHKUMAR R</h1>
-<p>B.Tech – Computer Science & Business Systems</p>
-
-<!-- ✅ View / Download CV Button -->
-<a class="btn" href="MONISHKUMAR_CV.pdf" target="_blank">
-    <i class="fas fa-file-pdf"></i> View / Download CV
-</a>
+    <!-- ✅ CV BUTTON ADDED -->
+    <a class="cv-btn" href="MONISHKUMAR_CV.pdf" target="_blank">
+        <i class="fas fa-file-pdf"></i> View / Download CV
+    </a>
 
 </header>
 
@@ -141,7 +148,6 @@ responsibility, and creativity while contributing to organizational growth.
 
 <section>
 <h2>Technical Skills</h2>
-
 <div class="grid">
 
 <div class="card">
@@ -176,37 +182,90 @@ responsibility, and creativity while contributing to organizational growth.
 <section>
 <h2>Projects</h2>
 
-<div class="card">All in One Health Care System</div>
-<div class="card">IoT Based Garbage Monitoring System</div>
-<div class="card">Smart Helmet</div>
-<div class="card">Campus Placement System using Generative AI</div>
-
-</section>
-
-<section>
-<h2>Contact</h2>
+<div class="card">
+<strong>All in One Health Care System</strong>
+<p>Integrated healthcare management solution.</p>
+</div>
 
 <div class="card">
+<strong>IoT Based Garbage Monitoring System</strong>
+<p>Smart waste monitoring using IoT technology.</p>
+</div>
 
-<p><i class="fas fa-phone"></i> 9363346048</p>
-<p><i class="fas fa-location-dot"></i> Chennai, India</p>
+<div class="card">
+<strong>Smart Helmet</strong>
+<p>Safety-focused smart helmet system.</p>
+</div>
 
-<a class="btn" href="mailto:monishkumarravi15@gmail.com">
-<i class="fas fa-envelope"></i> Send Email
-</a>
-
+<div class="card">
+<strong>Campus Placement System using Generative AI</strong>
+<p>AI-powered placement assistance platform.</p>
 </div>
 
 </section>
 
-<footer>
-© 2026 Monishkumar R
-</footer>
+<section>
+<h2>Internships</h2>
+<div class="card">
+<ul>
+<li>DLK Softwares – Web Development</li>
+<li>Southern Railways – Signals & Telecommunication</li>
+</ul>
+</div>
+</section>
 
-<!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/919363346048" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
+<section>
+<h2>Education</h2>
+
+<div class="card">
+<strong>B.Tech – CSBS (2027)</strong><br>
+RMD Engineering College, Chennai<br>
+CGPA: 7.82
+</div>
+
+<div class="card">
+<strong>HSC (2023)</strong><br>
+Dr. Natarajan Matric Hr. Sec. School – 77%
+</div>
+
+<div class="card">
+<strong>SSLC (2021)</strong><br>
+Dr. Natarajan Matric Hr. Sec. School – 100%
+</div>
+
+</section>
+
+<section>
+<h2>Certifications</h2>
+<div class="card">
+<ul>
+<li>NPTEL – Introduction to IoT & Software Conceptual Design</li>
+<li>Infosys Springboard – Python Foundation</li>
+<li>Java Foundation Certificate</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="card contact">
+<p><i class="fas fa-phone"></i>9363346048</p>
+
+<p>
+  <i class="fas fa-envelope"></i>
+  <a href="mailto:monishkumarravi15@gmail.com"
+     style="color:inherit; text-decoration:none;">
+    monishkumarravi15@gmail.com
+  </a>
+</p>
+
+<p><i class="fas fa-location-dot"></i>Chennai, India</p>
+</div>
+</section>
+
+<footer>
+© 2026 Monishkumar R | Portfolio
+</footer>
 
 </body>
 </html>
