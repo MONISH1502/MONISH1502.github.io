@@ -16,24 +16,19 @@
 }
 
 body{
-    background:linear-gradient(135deg,#0f172a,#020617);
-    color:#e2e8f0;
+    background:linear-gradient(120deg,#ffffff,#f5e6d3);
+    color:#3b2f2f;
     transition:0.4s;
-}
-
-/* LIGHT MODE */
-body.light{
-    background:linear-gradient(120deg,#e0e7ff,#f8fafc);
-    color:#0f172a;
 }
 
 /* HEADER */
 header{
     text-align:center;
     padding:60px 20px;
-    background:linear-gradient(135deg,#6366f1,#22d3ee);
-    color:white;
+    background:linear-gradient(135deg,#f1d6b8,#e8c9a8);
+    color:#3b2f2f;
     position:relative;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 /* PROFILE IMAGE */
@@ -46,15 +41,6 @@ header{
     margin-bottom:15px;
 }
 
-/* DARK MODE BUTTON */
-.toggle{
-    position:absolute;
-    right:20px;
-    top:20px;
-    cursor:pointer;
-    font-size:20px;
-}
-
 /* SECTIONS */
 section{
     max-width:1000px;
@@ -63,24 +49,21 @@ section{
 }
 
 h2{
-    border-left:6px solid #22d3ee;
+    border-left:6px solid #e0bfa0;
     padding-left:10px;
     margin-bottom:20px;
 }
 
 /* CARD */
 .card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(230,200,170,0.5);
     padding:20px;
     border-radius:14px;
     margin-bottom:20px;
     transition:0.3s;
-}
-
-body.light .card{
-    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card:hover{
@@ -94,16 +77,17 @@ body.light .card{
     gap:20px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
     display:inline-block;
     padding:10px 18px;
     border-radius:8px;
     margin-top:10px;
     text-decoration:none;
-    color:white;
-    background:linear-gradient(135deg,#6366f1,#22d3ee);
+    color:#3b2f2f;
+    background:linear-gradient(135deg,#f1d6b8,#e8c9a8);
     transition:0.3s;
+    font-weight:500;
 }
 
 .btn:hover{
@@ -114,8 +98,8 @@ body.light .card{
 footer{
     text-align:center;
     padding:20px;
-    background:#020617;
-    color:#94a3b8;
+    background:#f1d6b8;
+    color:#3b2f2f;
     margin-top:30px;
 }
 
@@ -129,7 +113,7 @@ footer{
     padding:15px;
     border-radius:50%;
     font-size:22px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 </style>
@@ -138,10 +122,6 @@ footer{
 <body>
 
 <header>
-
-<div class="toggle" onclick="toggleMode()">
-<i class="fas fa-moon"></i>
-</div>
 
 <img src="https://via.placeholder.com/150" class="profile" alt="Profile">
 
@@ -229,11 +209,6 @@ responsibility, and creativity while contributing to organizational growth.
 
 <script>
 
-/* DARK MODE */
-function toggleMode(){
-    document.body.classList.toggle("light");
-}
-
 /* TYPING EFFECT */
 const text = "B.Tech – Computer Science & Business Systems";
 let i = 0;
@@ -249,270 +224,6 @@ function typing(){
 typing();
 
 </script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monishkumar R | Portfolio</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background: linear-gradient(135deg,#0f172a,#020617);
-    color:#e2e8f0;
-    line-height:1.6;
-}
-
-/* HERO */
-header{
-    background: linear-gradient(135deg,#6366f1,#22d3ee);
-    color:white;
-    padding:80px 20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-header h1{
-    font-size:46px;
-    letter-spacing:1px;
-}
-
-header p{
-    margin-top:10px;
-    font-size:18px;
-    opacity:0.9;
-}
-
-/* SECTIONS */
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:50px 20px;
-}
-
-h2{
-    margin-bottom:25px;
-    border-left:6px solid #22d3ee;
-    padding-left:12px;
-    font-size:28px;
-}
-
-/* GLASS CARD */
-.card{
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    border:1px solid rgba(255,255,255,0.1);
-    padding:25px;
-    border-radius:16px;
-    margin-bottom:20px;
-    transition:0.35s ease;
-    box-shadow:0 8px 25px rgba(0,0,0,0.3);
-}
-
-.card:hover{
-    transform: translateY(-6px) scale(1.02);
-    box-shadow:0 18px 40px rgba(0,0,0,0.5);
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:22px;
-}
-
-ul{
-    margin-left:20px;
-}
-
-/* CONTACT */
-.contact i{
-    margin-right:10px;
-    color:#22d3ee;
-}
-
-/* EMAIL BUTTON */
-.email-btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:10px 18px;
-    background:linear-gradient(135deg,#6366f1,#22d3ee);
-    color:white;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-}
-
-.email-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 5px 15px rgba(34,211,238,0.4);
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:25px;
-    background:#020617;
-    color:#94a3b8;
-    margin-top:40px;
-    font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-    header h1{
-        font-size:32px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>MONISHKUMAR R</h1>
-    <p>B.Tech – Computer Science & Business Systems</p>
-</header>
-
-<section>
-<h2>Professional Summary</h2>
-<div class="card">
-To excel in my career by working in a reputed organization with loyalty,
-responsibility, and creativity while contributing to organizational growth.
-</div>
-</section>
-
-<section>
-<h2>Technical Skills</h2>
-<div class="grid">
-
-<div class="card">
-<h3>Programming</h3>
-<ul>
-<li>Java</li>
-<li>C++</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Areas of Interest</h3>
-<ul>
-<li>UI Modelling</li>
-<li>Cyber Security</li>
-<li>Cloud Computing</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Soft Skills</h3>
-<ul>
-<li>Time Management</li>
-<li>Creativity</li>
-<li>Leadership</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>Projects</h2>
-
-<div class="card">
-<strong>All in One Health Care System</strong>
-<p>Integrated healthcare management solution.</p>
-</div>
-
-<div class="card">
-<strong>IoT Based Garbage Monitoring System</strong>
-<p>Smart waste monitoring using IoT technology.</p>
-</div>
-
-<div class="card">
-<strong>Smart Helmet</strong>
-<p>Safety-focused smart helmet system.</p>
-</div>
-
-<div class="card">
-<strong>Campus Placement System using Generative AI</strong>
-<p>AI-powered placement assistance platform.</p>
-</div>
-
-</section>
-
-<section>
-<h2>Internships</h2>
-<div class="card">
-<ul>
-<li>DLK Softwares – Web Development</li>
-<li>Southern Railways – Signals & Telecommunication</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>Education</h2>
-
-<div class="card">
-<strong>B.Tech – CSBS (2027)</strong><br>
-RMD Engineering College, Chennai<br>
-CGPA: 7.82
-</div>
-
-<div class="card">
-<strong>HSC (2023)</strong><br>
-Dr. Natarajan Matric Hr. Sec. School – 77%
-</div>
-
-<div class="card">
-<strong>SSLC (2021)</strong><br>
-Dr. Natarajan Matric Hr. Sec. School – 100%
-</div>
-
-</section>
-
-<section>
-<h2>Certifications</h2>
-<div class="card">
-<ul>
-<li>NPTEL – Introduction to IoT & Software Conceptual Design</li>
-<li>Infosys Springboard – Python Foundation</li>
-<li>Java Foundation Certificate</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>Contact</h2>
-<div class="card contact">
-
-<p><i class="fas fa-phone"></i>9363346048</p>
-
-<p><i class="fas fa-location-dot"></i>Chennai, India</p>
-
-<a class="email-btn" href="mailto:monishkumarravi15@gmail.com">
-    <i class="fas fa-envelope"></i> Send Email
-</a>
-
-</div>
-</section>
-
-<footer>
-© 2026 Monishkumar R | Portfolio
-</footer>
 
 </body>
 </html>
